@@ -376,7 +376,7 @@ jobs:
           # is the writer. Prevents the 6 shard legs from racing to write the same Gradle cache.
           cache-read-only: true
       - name: Download frontend build artifacts
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: frontend-build-artifacts
       - name: Gradle test for frontend (shard ${{ matrix.frontend_shard }}/3)
@@ -758,7 +758,7 @@ jobs:
           path: ~/.gradle/caches/build-cache-1
           key: gradle-backend-build-cache-${{ github.run_id }}
       - name: Download all shards' JaCoCo exec
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           pattern: backend-jacoco-exec-shard*
           merge-multiple: true
